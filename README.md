@@ -1,6 +1,6 @@
-# VHDL Lexer
+# VHDL Lexer, Parser, and Simulator
 
-A simple VHDL lexer implementation in C++ that tokenizes VHDL source code.
+A simple VHDL sim implementation in C++ that tokenizes VHDL source code, parses the tokens to abstract syntax trees, and evalutaes the trees based on specified inputs.
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ A simple VHDL lexer implementation in C++ that tokenizes VHDL source code.
 ### Using g++ directly:
 
 ```bash
-g++ -o vhdl_lexer Main.cpp Lexer.cpp
+g++ -o vhdl_sim Main.cpp Lexer.cpp Parser.cpp
 ```
 
 ## Running the Program
@@ -20,24 +20,6 @@ g++ -o vhdl_lexer Main.cpp Lexer.cpp
 After building, you can run the program by providing a VHDL source file as input:
 
 ```bash
-./vhdl_lexer input_file.vhd
+./vhdl_sim test.vhdl
 ```
 
-The program will read the VHDL file and output the tokens found in the source code.
-
-## Project Structure
-
-- `Main.cpp` - Main program entry point
-- `Lexer.h` - Lexer class header
-- `Lexer.cpp` - Lexer implementation
-- `Token.h` - Token class definition
-
-## Example Usage
-
-```bash
-# Compile the program
-g++ -o vhdl_lexer Main.cpp Lexer.cpp
-
-# Run with a VHDL file
-./vhdl_lexer example.vhd
-```
